@@ -1,0 +1,14 @@
+/*
+To configure your server, follow these steps:
+1. Create an mLab account (https://mlab.com/) & add your MongoDB connection credentials in 'db' field
+2. Configure desired host ip and port, as the example below
+3. Change the value of the sessionHashKey field
+4. Rename this file to "app.js"
+*/
+
+module.exports = {
+    db: 'mongodb://db_user:db_user_password@your_mlab_web_path/your_db_name', // MongoDB example using mLab
+    host: '127.0.0.1',
+    port: '3000',
+    sessionHashKey: 'add_a_secure_hash_key_here'
+};
