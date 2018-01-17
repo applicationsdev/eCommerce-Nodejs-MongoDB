@@ -1,5 +1,5 @@
 ### Applications Developer
-[Full Stack solutions, forks & case studies](https://github.com/applicationsdev?tab=repositories)
+[Full stack solutions](https://github.com/applicationsdev?tab=repositories)
 
 ### About
 eCommerce app with RESTful API using Nodejs, MongoDB, Elasticsearch & Bootstrap
@@ -9,3 +9,9 @@ eCommerce app with RESTful API using Nodejs, MongoDB, Elasticsearch & Bootstrap
 
 ### Get started
 coming soon..
+
+### Resources
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Elasticsearch](https://www.elastic.co/)
+- [Bootstrap](http://getbootstrap.com/)
