@@ -1,0 +1,46 @@
+{
+  "name": "Nodejs-MongoDB-ElasticSearch-eCommerce",
+  "version": "1.0.0",
+  "description": "eCommerce app with RESTful API using Nodejs, MongoDB, Elasticsearch & Bootstrap",
+  "main": "server.js",
+  "scripts": {
+    "start": "npx nodemon",
+    "test": "echo \"WARN: No test scripts are specified in this version\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/applicationsdev/Nodejs-MongoDB-ElasticSearch-eCommerce.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mongodb",
+    "rest-api",
+    "elasticsearch",
+    "ecommerce",
+    "bootstrap"
+  ],
+  "author": "Applications Developer <https://github.com/applicationsdev>",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/applicationsdev/Nodejs-MongoDB-ElasticSearch-eCommerce#readme",
+  "bugs": {
+    "url": "https://github.com/applicationsdev/Nodejs-MongoDB-ElasticSearch-eCommerce/issues"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.0",
+    "nodemon": "^1.14.10"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "ejs-mate": "^2.3.0",
+    "express": "^4.16.2",
+    "express-flash": "0.0.2",
+    "express-session": "^1.15.6",
+    "mongoose": "^4.13.9",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}

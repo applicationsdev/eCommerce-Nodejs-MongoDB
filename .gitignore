@@ -1,0 +1,19 @@
+# Applications Developer
+# https://github.com/applicationsdev/Nodejs-MongoDB-ElasticSearch-eCommerce
+# GPL-3.0
+
+# Setup for Linux development environments
+/node_modules
+*.log
+/config/app.js
+
+# Common settings for MacOS dev. environments
+.DS_Store
+._*
+.Trashes
+
+# Common settings for Windows dev. environments
+[Dd]esktop.ini
+*umbs.db
+
+# Edits & more settings needed, depending on current OS & IDE
