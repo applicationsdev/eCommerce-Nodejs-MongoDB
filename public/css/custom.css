@@ -1,0 +1,14 @@
+/* Custom stylesheet */
+
+body {
+    margin-top: 3.5rem;
+}
+
+img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.moveDown {
+    margin-top: 5rem;
+}
