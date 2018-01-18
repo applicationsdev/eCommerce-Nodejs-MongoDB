@@ -1,0 +1,28 @@
+<% layout('theme') -%>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-4">
+                
+            <% if (loginMessage.length > 0) { %>
+              <div class="alert alert-warning" role="alert">
+                  <%= loginMessage %>
+              </div>
+            <% } %>
+                
+            <h2>Login</h2>
+                
+            <form method="post">
+              <div class="form-group">
+                <label for="inputEmail">eMail</label>
+                <input type="email" id="inputEmail" class="form-control" name="email" required>
+              </div>
+                    
+              <div class="form-group">
+                <label for="inputPass">Password</label>
+                <input type="password" id="inputPass" class="form-control" name="password" required>
+              </div>
+                    
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            
+          </div>
+        </div><!-- /row -->

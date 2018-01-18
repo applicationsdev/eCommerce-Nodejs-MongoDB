@@ -1,0 +1,33 @@
+<% layout('theme') -%>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-4">
+      
+            <% if (signupMessage.length > 0) { %>
+                <div class="alert alert-warning" role="alert">
+                    <%= signupMessage %>
+                </div>
+            <% } %>
+                
+            <h2>Signup</h2>
+                
+              <form method="post">
+                <div class="form-group">
+                  <label for="inputName">Name</label>
+                  <input type="text" id="inputName" class="form-control" name="name" required>
+                </div>
+                    
+                <div class="form-group">
+                  <label for="inputEmail">eMail</label>
+                  <input type="email" id="inputEmail" class="form-control" name="email" required>
+                </div>
+                    
+                <div class="form-group">
+                  <label for="inputPass">Password</label>
+                  <input type="password" id="inputPass" class="form-control" name="password" required>
+                </div>
+                    
+                <button type="submit" class="btn btn-primary">SignUp</button>
+              </form>
+              
+            </div>
+        </div><!-- /row -->
