@@ -29,7 +29,7 @@ router.post('/signup', function(req, res, next) {
                 
                 req.logIn(user, function(err) {
                     if (err) return next(err);
-                    res.redirect('/profile');
+                    res.redirect('/dashboard');
                 });
             });
         }
@@ -42,7 +42,7 @@ router.get('/login', function(req, res) {
 });
 
 router.post('/login', passport.authenticate('login', {
-    successRedirect: '/profile',
+    successRedirect: '/dashboard',
     failureRedirect: '/login',
     failureFlash: true
 }));
