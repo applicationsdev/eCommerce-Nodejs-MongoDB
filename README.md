@@ -13,6 +13,8 @@ coming soon..
 - [Elasticsearch](https://www.elastic.co/)
 - [Bootstrap](http://getbootstrap.com/)
 
-### License
-- Author's work is licensed under [MIT](https://opensource.org/licenses/MIT) License
-- Frameworks & packages are licensed by their respective developers and/or owners
+
+&copy; [Applications Developer](https://github.com/applicationsdev?tab=repositories)
+Author's work is licensed under [MIT](https://opensource.org/licenses/MIT) License
+
+Frameworks & packages are properties of their respective developers and/or owners & are licensed by them

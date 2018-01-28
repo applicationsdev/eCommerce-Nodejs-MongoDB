@@ -6,10 +6,19 @@ var schema = mongoose.Schema;
 
 /* User model definition */
 var userModel = new schema({
+    
+    // Not "nullable" - Required at Signup in current version
     name: String,
     email: { type: String, unique: true, lowercase: true },
     password: String,
-    photo: String,
+    
+    // "Nullable" - Not required at Signup in current version
+    security_info: {
+        // These 2 fields are set for use in next commits
+        verify_token: { type: String, default: '' },
+        state: { type: String, default: '' }
+    },
+    photo: { type: String, default: 'https://via.placeholder.com/150x150' },
     address_line1: { type: String, default: '' },
     address_line2: { type: String, default: '' },
     country_code: { type: String, default: '' },

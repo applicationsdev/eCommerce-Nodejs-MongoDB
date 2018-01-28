@@ -15,7 +15,6 @@ router.post('/signup', function(req, res, next) {
     user.name = req.body.name;
     user.email = req.body.email;
     user.password = req.body.password;
-    user.photo = user.generatePhoto();
     
     User.findOne({ email: req.body.email }, function(err, existingUser) {
         if (err) return next(err);
@@ -61,6 +60,49 @@ router.get('/dashboard', function(req, res, next) {
             res.render('user/dashboard', { user: user });
         });
     }
+});
+
+/* Dashboard Edit route */
+router.get('/dashboard-edit', function(req, res, next) {
+    // Non authenticated user
+    if (!req.user) {
+        req.logout();
+        res.redirect('/login');
+    }
+    // Authenticated user
+    else {
+        User.findOne({ _id: req.user._id }, function(err, user) {
+            if (err) return next(err);
+            res.render('user/dashboard-edit', { user: user, dashboardEditMessage: req.flash('dashboardEditMessageContent') });
+        });
+    }
+});
+
+router.post('/dashboard-edit', function(req, res, next) {
+    User.findOne({ _id: req.user._id }, function(err, user) {
+        
+        if (err) return next(err);
+        
+        // Edit user login credentials
+        if (req.body.email_1 && (req.body.email_1 === req.body.email_2)) user.email = req.body.email_1;
+        if (req.body.password_1 && (req.body.password_1 === req.body.password_2)) user.password = req.body.password_1;
+        
+        // Edit user account information
+        if (req.body.generate_new_photo) user.photo = user.generatePhoto();
+        if (req.body.name) user.name = req.body.name;
+        if (req.body.address_line_1) user.address_line1 = req.body.address_line_1;
+        if (req.body.address_line_2) user.address_line2 = req.body.address_line_2;
+        if (req.body.country_code) user.country_code = req.body.country_code;
+        if (req.body.postal_code) user.postal_code = req.body.postal_code;
+        if (req.body.tel) user.tel = req.body.tel;
+        
+        user.save(function(err) {
+            if (err) return next(err);
+            
+            req.flash('dashboardEditMessageContent', 'Your changes have been saved successfully');
+            return res.redirect('/dashboard');
+        });
+    });
 });
 
 /* Logout route */
