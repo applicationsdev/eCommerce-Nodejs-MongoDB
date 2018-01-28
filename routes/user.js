@@ -28,6 +28,7 @@ router.post('/signup', function(req, res, next) {
                 
                 req.logIn(user, function(err) {
                     if (err) return next(err);
+                    req.flash('dashboardMessageContent', 'Your new account has been made successfully');
                     res.redirect('/dashboard');
                 });
             });
@@ -57,7 +58,11 @@ router.get('/dashboard', function(req, res, next) {
     else {
         User.findOne({ _id: req.user._id }, function(err, user) {
             if (err) return next(err);
-            res.render('user/dashboard', { user: user });
+            res.render('user/dashboard', {
+                user: user,
+                dashboardMessage: req.flash('dashboardMessageContent'),
+                dashboardEditMessage: req.flash('dashboardEditMessageContent')
+            });
         });
     }
 });
@@ -84,8 +89,22 @@ router.post('/dashboard-edit', function(req, res, next) {
         if (err) return next(err);
         
         // Edit user login credentials
-        if (req.body.email_1 && (req.body.email_1 === req.body.email_2)) user.email = req.body.email_1;
-        if (req.body.password_1 && (req.body.password_1 === req.body.password_2)) user.password = req.body.password_1;
+        if (req.body.email) user.email = req.body.email;
+        
+        if (req.body.password_1) {
+            if (!req.body.password_2) {
+                req.flash('dashboardEditMessageContent', 'Password confirmation field was submited empty');
+                return res.redirect('/dashboard-edit');
+            } else {
+                
+                if ( req.body.password_1 !== req.body.password_2 ) {
+                    req.flash('dashboardEditMessageContent', 'Password confirmation is not matching');
+                    return res.redirect('/dashboard-edit');
+                } else {
+                    user.password = req.body.password_1;
+                }
+            }
+        }
         
         // Edit user account information
         if (req.body.generate_new_photo) user.photo = user.generatePhoto();

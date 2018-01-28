@@ -1,0 +1,77 @@
+<% layout('theme') -%>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-4">
+      
+            <% if (dashboardEditMessage.length > 0) { %>
+                <div class="alert alert-warning" role="alert">
+                    <%= dashboardEditMessage %>
+                </div>
+            <% } %>
+                
+            <!-- WARNING: Errors are left here on purpose for behavior testing purposes -->
+            <h2>Edit your account</h2>
+                
+              <form method="post">
+                
+                <p>Edit your login credentials</p>
+                <div class="form-group">
+                  <label for="inputEmail"><span class="text-muted">eMail&#58;</span> <%= user.email %></label>
+                  <input type="text" id="inputEmail" class="form-control" name="email">
+                </div>
+                
+                <p class="text-muted">Password&#58; <i>This value is hidden for security purposes</i></p>
+                <div class="form-group">
+                  <label for="inputPassword1"><span class="text-muted">Enter new password</span></label>
+                  <input type="text" id="inputPassword1" class="form-control" name="password_1">
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword2"><span class="text-muted">Confirm new password</span></label>
+                  <input type="text" id="inputPassword2" class="form-control" name="password_2">
+                </div>
+                
+                
+                <p>Edit your account information</p>
+                
+                <!--
+                <p>
+                  <span class="text-muted">Photo&#58;</span>
+                  <img class="img-fluid rounded-circle" src="<%= user.photo %>" alt="">
+                </p>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="inputPhoto" name="generate_new_photo">
+                  <label class="form-check-label" for="inputPhoto">Check this box to generate new avatar photo</label>
+                </div>
+                -->
+                
+                <div class="form-group">
+                  <label for="inputName"><span class="text-muted">Name&#58;</span> <%= user.name %></label>
+                  <input type="text" id="inputName" class="form-control" name="name">
+                </div>
+                
+                <div class="form-group">
+                  <label for="inputAddress1"><span class="text-muted">Address Line 1&#58;</span> <%= user.address_line1 %></label>
+                  <input type="text" id="inputAddress1" class="form-control" name="address_line_1">
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress2"><span class="text-muted">Address Line 2&#58;</span> <%= user.address_line2 %></label>
+                  <input type="text" id="inputAddress2" class="form-control" name="address_line_2">
+                </div>
+                
+                <div class="form-group">
+                  <label for="inputCountryCode"><span class="text-muted">Country&#58;</span> <%= user.country_code %></label>
+                  <input type="text" id="inputCountryCode" class="form-control" name="country_code">
+                </div>
+                <div class="form-group">
+                  <label for="inputPostalCode"><span class="text-muted">Postal Code&#58;</span> <%= user.postal_code %></label>
+                  <input type="text" id="inputPostalCode" class="form-control" name="postal_code">
+                </div>
+                <div class="form-group">
+                  <label for="inputPhoneNumber"><span class="text-muted">Phone Number&#58;</span> <%= user.tel %></label>
+                  <input type="text" id="inputPhoneNumber" class="form-control" name="tel">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Save</button>
+              </form>
+              
+            </div>
+        </div><!-- /row -->

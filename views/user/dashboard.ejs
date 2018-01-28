@@ -2,11 +2,33 @@
         <div class="row">
           <div class="col-md-6 col-md-offset-4">
             
+            <% if (dashboardMessage.length > 0) { %>
+                <div class="alert alert-warning" role="alert">
+                    <%= dashboardMessage %>
+                </div>
+            <% } %>
+            
+            <% if (dashboardEditMessage.length > 0) { %>
+                <div class="alert alert-warning" role="alert">
+                    <%= dashboardEditMessage %>
+                </div>
+            <% } %>
+            
             <h2>Dashboard</h2>
             
+            <p><span class="text-muted">eMail&#58;</span> <%= user.email %></p>
+            
+            <p>
+            <span class="text-muted">Photo&#58;</span>
             <img class="img-fluid rounded-circle" src="<%= user.photo %>" alt="">
-            <p>Name&#58; <%= user.name %></p>
-            <p>Email&#58; <%= user.email %></p>
+            </p>
+            
+            <p><span class="text-muted">Name&#58;</span> <%= user.name %></p>
+            <p><span class="text-muted">Address Line 1&#58;</span> <%= user.address_line1 %></p>
+            <p><span class="text-muted">Address Line 2&#58;</span> <%= user.address_line2 %></p>
+            <p><span class="text-muted">Country&#58;</span> <%= user.country_code %></p>
+            <p><span class="text-muted">Postal Code&#58;</span> <%= user.postal_code %></p>
+            <p><span class="text-muted">Phone Number&#58;</span> <%= user.tel %></p>
             
           </div>
         </div><!-- /row -->
