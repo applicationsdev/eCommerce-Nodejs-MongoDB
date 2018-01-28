@@ -1,8 +1,7 @@
 # Applications Developer
 # https://github.com/applicationsdev/Nodejs-MongoDB-ElasticSearch-eCommerce
-# GPL-3.0
 
-# Setup for Linux development environments
+# My settings for Linux development environments
 /node_modules
 *.log
 /config/app.js
