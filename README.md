@@ -1,10 +1,14 @@
-### Applications Developer
-[Full Stack Solutions](https://github.com/applicationsdev?tab=repositories)
-
 ### About
-eCommerce app with RESTful API using Nodejs, MongoDB, Elasticsearch & Bootstrap
+- eCommerce Application
+- Back End: Node.js, Express, MongoDB, RESTful API
+- Front End: EJS, Bootstrap
 
-### Get started
+### Environment
+- Syntax: JavaScript / ECMAScript 5, Node.js 8.9.4+, Bootstrap 4+
+- Current Git branch: Development Environment is maintained
+- Packages / Dependencies: [package.json](https://github.com/applicationsdev/eCommerce-Nodejs-MongoDB/blob/master/package.json)
+
+### Get Started
 coming soon..
 
 ---
@@ -13,12 +17,23 @@ coming soon..
 
 Author's work is licensed under [MIT](https://opensource.org/licenses/MIT) License
 
-Frameworks & packages are properties of their respective developers and/or owners & are licensed by them
+Frameworks, packages & web resources are properties of their respective developers and/or owners & are licensed by them
 
 ---
 
-Official Resources
+Resources - References
 - [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [npm](https://www.npmjs.com/)
+- npm [packages](https://github.com/applicationsdev/eCommerce-Nodejs-MongoDB/blob/master/package.json) used in this project
+
 - [MongoDB](https://www.mongodb.com/)
-- [Elasticsearch](https://www.elastic.co/)
+- [mLab](https://mlab.com/)
+
+- [EJS](http://ejs.co/)
 - [Bootstrap](http://getbootstrap.com/)
+
+- [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)
+- [HTTP Messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages)
+- [HTTP Request Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+- [HTTP Status Codes](http://www.restapitutorial.com/httpstatuscodes.html)

@@ -1,7 +1,7 @@
 {
-  "name": "Nodejs-MongoDB-ElasticSearch-eCommerce",
-  "version": "1.0.0",
-  "description": "eCommerce app with RESTful API using Nodejs, MongoDB, Elasticsearch & Bootstrap",
+  "name": "eCommerce-Nodejs-MongoDB",
+  "version": "1.1.0",
+  "description": "eCommerce Application | Back End: Node.js, Express, MongoDB, RESTful API | Front End: EJS, Bootstrap",
   "main": "server.js",
   "scripts": {
     "start": "npx nodemon",
@@ -9,21 +9,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/applicationsdev/Nodejs-MongoDB-ElasticSearch-eCommerce.git"
+    "url": "git+https://github.com/applicationsdev/eCommerce-Nodejs-MongoDB.git"
   },
   "keywords": [
+    "ecommerce",
     "nodejs",
+    "express",
     "mongodb",
     "rest-api",
-    "elasticsearch",
-    "ecommerce",
-    "bootstrap"
+    "ejs",
+    "bootstrap",
+    "javascript"
   ],
   "author": "Applications Developer <https://github.com/applicationsdev>",
-  "license": "GPL-3.0",
-  "homepage": "https://github.com/applicationsdev/Nodejs-MongoDB-ElasticSearch-eCommerce#readme",
+  "license": "MIT",
+  "homepage": "https://github.com/applicationsdev/eCommerce-Nodejs-MongoDB#readme",
   "bugs": {
-    "url": "https://github.com/applicationsdev/Nodejs-MongoDB-ElasticSearch-eCommerce/issues"
+    "url": "https://github.com/applicationsdev/eCommerce-Nodejs-MongoDB/issues"
   },
   "devDependencies": {
     "morgan": "^1.9.0",
