@@ -4,9 +4,10 @@
 - Front End: EJS, Bootstrap
 
 ### Environment
-- Syntax: JavaScript / ECMAScript 5, Node.js 8.9.4+, Bootstrap 4+
-- Current Git branch: Development Environment is maintained
+- Environment Type: Development Environment
+- Versions: Node.js 8.9.4+, Bootstrap 4+
 - Packages / Dependencies: [package.json](https://github.com/applicationsdev/eCommerce-Nodejs-MongoDB/blob/master/package.json)
+- Syntax: JavaScript / ECMAScript 5, EJS, HTML5
 
 ### Get Started
 coming soon..
